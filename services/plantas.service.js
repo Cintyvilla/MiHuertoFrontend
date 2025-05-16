@@ -8,6 +8,13 @@ export async function obtenerPlantas(params) {
     return res.data;
 }
 
+export async function obtenerPlantasEnHuertos(params) {
+    const res = await backendApi.get("/plantsOnOrchards", {
+        params: params,
+    });
+    return res.data;
+}
+
 
 export async function login(body) {
     const res = await backendApi.post("/users/login", body);

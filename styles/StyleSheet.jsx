@@ -375,7 +375,7 @@ const styles = StyleSheet.create({
   nombreTarjetaT: {
     fontSize: 12,
     fontWeight: 700,
-    marginLeft: "10px", 
+    marginLeft: "10px",
 
   },
   textosTem: {
@@ -456,7 +456,7 @@ const styles = StyleSheet.create({
     fontWeight: 450,
     paddingTop: 5,
   },
-//DetallePlanta:
+  //DetallePlanta:
   container: {
     padding: 16,
     backgroundColor: "#fff",
@@ -539,7 +539,20 @@ const styles = StyleSheet.create({
     fontWeight: "600",
     fontSize: 14,
     color: "#2E7D32",
-  }
+  },
+
+
+  detalleHuertoTitulo: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginBottom: 15,
+  },
+  detalleHuertoSubTitulo: {
+    fontWeight: 'bold'
+  },
+  detalleHuertoTexto: {
+    marginBottom: 10,
+  },
 });
 
 // Exporta los estilos para ser usados en los componentes
