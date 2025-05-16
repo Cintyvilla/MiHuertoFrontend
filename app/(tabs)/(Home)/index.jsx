@@ -4,7 +4,7 @@ import Perfil from "@/assets/images/perfil.png";
 import general from "@/styles/Login";
 import base from "@/styles/StyleSheet";
 import { FontAwesome6 } from "@expo/vector-icons";
-import { Image, Text, View } from "react-native";
+import { Image, ScrollView, Text, View } from "react-native";
 
  function Index() {
 
@@ -12,7 +12,7 @@ import { Image, Text, View } from "react-native";
 
   return ( //devuelve info desde está función, los elementos que queremos que se impriman
     
-    <View
+    <ScrollView
      style={base.container}>
 
     <View style={general.containerhome}>
@@ -62,7 +62,7 @@ import { Image, Text, View } from "react-native";
       />
 
 
-    </View>
+    </ScrollView>
   );
 }
 
