@@ -14,9 +14,3 @@ export async function obtenerPlantasEnHuertos(params) {
     });
     return res.data;
 }
-
-
-export async function login(body) {
-    const res = await backendApi.post("/users/login", body);
-    return res.data;
-}

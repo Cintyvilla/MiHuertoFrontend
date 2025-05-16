@@ -1,3 +1,4 @@
+import { SessionProvider } from "@/providers/session.provider";
 import {
   Lato_100Thin,
   Lato_100Thin_Italic,
@@ -10,10 +11,10 @@ import {
   Lato_900Black,
   Lato_900Black_Italic,
   useFonts,
-} from '@expo-google-fonts/lato';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import React, { useEffect } from 'react';
+} from "@expo-google-fonts/lato";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import React, { useEffect } from "react";
 
 SplashScreen.preventAutoHideAsync();
 
@@ -40,8 +41,12 @@ export default function RootLayout() {
   if (!fontsLoaded) return null;
 
   return (
-    <Stack>
-      <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-    </Stack>
+    <SessionProvider>
+      <Stack>
+        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="login" options={{ headerShown: false, presentation: 'modal', }} />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
+      </Stack>
+    </SessionProvider>
   );
 }
